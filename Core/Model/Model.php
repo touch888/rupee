@@ -12,9 +12,9 @@ class Model extends Mysql
     private static $mysqlModel = null ;
     private static $_instance = null;
     
-    public function __construct()
+    public function __construct(array $param=[])
     {
-        self::__initialize();
+        self::__initialize($param);
     }
     
     private function __clone()
@@ -22,8 +22,9 @@ class Model extends Mysql
         
     }
     
-    private function __initialize()
+    private function __initialize($param)
     {
+        Mysql::run($param);
         self::$mysqlModel = Mysql::$db;
     }
 
