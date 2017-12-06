@@ -3,6 +3,7 @@
 namespace Core;
 
 use Core\DbDriver\Mysql;
+use Core\Model\Model;
 
 /**
  * Description of Core
@@ -42,6 +43,7 @@ class Core
     private function initDb(array $config=[])
     {
         Mysql::run(self::$config['db']);
+        var_dump(Model::init());
         var_dump(Mysql::$db,123);
     }
 
