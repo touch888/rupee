@@ -7,6 +7,7 @@ return [
         'db_name' => 'db',
         'db_pass' => 'root',
         'db_user' => 'root',
+        'db_port' => 3306 ,
         'db_prefix' => ''
     ]
 ];
